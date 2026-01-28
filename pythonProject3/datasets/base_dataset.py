@@ -21,9 +21,11 @@ class BaseDataset(ABC):
         self.client_id = client_id  # 客户端ID（None表示全局数据集）
 
         base_config_dict = get_base_config()
-        self.raw_data_path =  base_config_dict["raw_data_path"]
+        self.RAW_DATA_PATH_FROM_CONFIG = base_config_dict["raw_data_path"]
+        self.PROCESSED_DATA_PATH_FROM_CONFIG = base_config_dict["processed_data_path"]
+        self.raw_data_path = os.path.join(self.RAW_DATA_PATH_FROM_CONFIG, self.dataset_name)
         self.processed_data_path = os.path.join(
-            PROCESSED_DATA_PATH,
+            self.PROCESSED_DATA_PATH_FROM_CONFIG,  # 使用提取到的路径，不再直接用PROCESSED_DATA_PATH
             f"{self.dataset_name}_non_iid_alpha_{self.non_iid_alpha}"
         )
         # 创建目录（若不存在）

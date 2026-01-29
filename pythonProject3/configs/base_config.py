@@ -28,7 +28,7 @@ def get_base_config():
     DATASET_CONFIG = {
         "name": "femnist",  # 默认数据集：cifar10，可选：emnist、svhn、femnist
         "non_iid_alpha": 0.1,  # Non-IID α值，越小Non-IID程度越高，默认0.1（极端Non-IID）
-        "num_classes": 62,  # 默认类别数：cifar10为10，emnist为62，可后续被模型配置覆盖
+        "num_classes": 62,  # 默认类别数：cifar10为10，femnist emnist为62，可后续被模型配置覆盖
     }
 
     # 6. 训练基础配置（所有训练流程的公共参数）

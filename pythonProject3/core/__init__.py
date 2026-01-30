@@ -27,7 +27,7 @@ from .pseudo_label.pseudo_label import PseudoLabelGenerator
 # ==============================================
 # 4. 公平客户端选择模块（fair_selection）- 无修改：复用SA贡献度提升选择精准度
 # ==============================================
-from .fair_selection.fair_selector import FairClientSelector
+from .fair_selection.fair_selection import FairClientSelector
 
 # ==============================================
 # 5. Shapley模块（shapley）- 核心修改：新增calculate_sa_contribution() 融合ALA特征

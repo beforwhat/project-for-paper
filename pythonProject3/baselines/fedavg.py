@@ -1,15 +1,4 @@
 # baselines/fedavg.py
-"""
-基础FedAvg（联邦平均）算法实现
-核心定位：联邦学习最基础的基准算法，作为所有优化算法的对比参照
-核心逻辑：
-1. 客户端（FedAvgClient）：纯本地训练，无任何特殊优化（无DP、无ALA、无伪标签）；
-2. 服务端（FedAvgServer）：等权重平均所有客户端上传的模型参数，无加权聚合；
-设计原则：
-- 严格复用项目BaseServer/BaseClient接口，仅重写核心的local_train（客户端）和aggregate_local_results（服务端）；
-- 逻辑极简，无额外优化，保证对比实验的公平性；
-- 兼容项目配置体系，可通过config.yaml调整训练超参数。
-"""
 import torch
 import torch.optim as optim
 import torch.nn.functional as F

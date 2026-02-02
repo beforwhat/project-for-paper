@@ -1,0 +1,35 @@
+# 基础运行环境（Python版本约束）
+python>=3.8,<3.11
+
+# PyTorch核心（CUDA 11.8版本，适配A10/4090/A100）
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
+
+# 科学计算（项目核心依赖）
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.10.1
+
+# 数据处理（datasets模块）
+scikit-learn==1.2.2
+torchdata==0.7.0
+
+# 并行/效率（utils/parallel.py）
+psutil==5.9.5
+multiprocess==0.70.14
+tqdm==4.65.0
+
+# 可视化（utils/visualization.py）
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# 日志/配置
+loguru==0.7.2
+python-dotenv==1.0.0
+
+# 可选：分布式训练（多卡并行）
+torchdistx==0.1.0
+
+# 可选：GPU监控（方便调试）
+nvitop==1.2.0

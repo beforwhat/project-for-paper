@@ -71,3 +71,5 @@ FedFairADP-ALA/  # 项目根目录
 │   ├── fairness_verification/
 │   └── efficiency_robustness/
 └── main.py       # 项目入口文件（可选，批量运行实验、解析命令行参数）
+└── test_env.py   #测试各个模块功能是否正常
+└── requirements.txt #项目依赖
